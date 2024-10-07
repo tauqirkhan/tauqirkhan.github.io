@@ -1,3 +1,11 @@
 import "./style.css";
+import { createProjectElement } from "./utils/project";
 
-console.log("Hello World");
+const parentEl = document.querySelector(".second-page section");
+
+createProjectElement(parentEl);
+createProjectElement(parentEl);
+createProjectElement(parentEl);
+createProjectElement(parentEl);
+createProjectElement(parentEl);
+createProjectElement(parentEl);
