@@ -114,65 +114,63 @@ body {
 
 .intro-page main {
   max-width: 90vw;
+  max-height: 60vh;
   background-color: var(--background-color);
 }
 
 .intro-page section {
-  display: flex;
+  box-shadow: 10px 0px 20px 10px rgb(255, 255, 255, 0.1);
+  display: grid;
+  grid-template:
+    [row1-start] "portrait h2" 1fr[row1-end]
+    [row2-start] "portrait p" 2fr[row2-end]
+    [row3-start] "portrait svg" 1fr[row3-end]
+    / 33vw 1fr;
+  column-gap: 5vw;
+  padding: 50px 50px 50px 0;
 }
 
 .intro-page .portrait {
   position: relative;
+  grid-area: portrait;
+  width: 100%;
+  display: grid;
+  align-items: center;
 }
 
 .intro-page .portrait img {
-  max-width: 600px;
-  border-radius: 50px;
+  max-width: 16.5vw;
+  max-height: 33vh;
+  object-fit: cover;
+  transform-origin: right center;
+  transform: scale(2) translate(50%);
 }
 
 .intro-page section .myName {
   position: absolute;
-  bottom: 2%;
-  left: 3%;
-  letter-spacing: 10px;
   color: var(--large-bold-text);
-  font-size: 5em;
-}
-
-.intro-page .about {
-  box-shadow: 10px 0px 20px 10px rgb(255, 255, 255, 0.1);
-  padding: 3vh 2vw 2vh;
-  transform: scaleY(0.8);
-  display: flex;
-  flex-direction: column;
-  gap: 2vh;
-  max-width: 45vw;
-  justify-content: center;
-}
-
-.intro-page .about > *,
-.intro-page h2 {
-  transform: scaleY(1.25);
+  font-size: 4.5em;
 }
 
 .intro-page h2 {
   color: var(--large-bold-text);
   font-size: 2.89em;
-  margin-bottom: 3vh;
+  grid-area: h2;
 }
 
 .intro-page p {
-  padding: 2vh 0;
+  margin: 20px 0;
+  grid-area: p;
   color: var(--normal-text);
   font-size: 1.17em;
 }
 
 .intro-page .svg {
+  grid-area: svg;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 2vw;
-  margin-top: 3vh;
 }
 
 /* second-page */
