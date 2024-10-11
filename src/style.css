@@ -132,7 +132,7 @@ body {
 .intro-page .portrait {
   position: relative;
   grid-area: portrait;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
 }
@@ -215,6 +215,59 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .intro-page {
+    display: block;
+  }
+
+  .intro-page main {
+    max-width: none;
+  }
+
+  .intro-page section {
+    padding: 0;
+    display: block;
+    box-shadow: none;
+    padding-top: 30px;
+    padding-bottom: 75px;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .intro-page .portrait {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .intro-page .portrait > img {
+    max-width: 100%;
+    transform: none;
+  }
+
+  .intro-page .portrait > .myName {
+    bottom: 0%;
+    left: 10%;
+    font-size: 3em;
+  }
+
+  .intro-page section h2 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .intro-page .details {
+    padding: 0 20px 0;
+  }
+
+  .intro-page .svg {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .intro-page .svg svg {
+    width: 40px;
+  }
+}
 /* second-page */
 
 .second-page {
@@ -312,6 +365,22 @@ body {
   }
 }
 
+@media (max-width: 500px) {
+  .second-page main header {
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  .second-page main section {
+    padding: 0 20px;
+    display: block;
+  }
+
+  .second-page main section > .project {
+    margin-bottom: 50px;
+  }
+}
+
 /* third-page */
 
 .third-page {
@@ -405,5 +474,42 @@ body {
   .third-page main {
     gap: 20px;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .third-page main {
+    display: block;
+    max-width: 100vw;
+  }
+
+  .third-page section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 50px;
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  .third-page section > h2 {
+    justify-content: center;
+  }
+
+  .third-page section .svg {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .third-page svg {
+    width: 40px;
+  }
+
+  .third-page .information {
+    gap: 20px;
+  }
+
+  .third-page aside img {
+    border-radius: 0;
   }
 }
