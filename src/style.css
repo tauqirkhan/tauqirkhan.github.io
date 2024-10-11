@@ -395,3 +395,15 @@ body {
   display: flex;
   gap: 30px;
 }
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  .third-page aside img {
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+  .third-page main {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
