@@ -247,7 +247,7 @@ body {
 .second-page section {
   display: grid;
   gap: 50px;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 /* .second-page .project */
@@ -282,7 +282,6 @@ body {
   grid-area: heading;
   display: flex;
   justify-content: space-between;
-  display: flex;
   align-items: center;
 }
 
@@ -301,6 +300,16 @@ body {
 .project .heading > .svg {
   display: flex;
   gap: 10px;
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  .second-page section {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .second-page main {
+    padding: 0px 50px 50px 50px;
+  }
 }
 
 /* third-page */
