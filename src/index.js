@@ -36,5 +36,5 @@ function checkMediaQuery() {
 // Initial check
 checkMediaQuery();
 
-// Optional: Recheck on resize
-window.addEventListener("resize", checkMediaQuery);
+// // Optional: Recheck on resize
+// window.addEventListener("resize", checkMediaQuery);

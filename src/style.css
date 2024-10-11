@@ -114,7 +114,6 @@ body {
 
 .intro-page main {
   max-width: 90vw;
-  max-height: 60vh;
   background-color: var(--background-color);
 }
 
@@ -134,13 +133,12 @@ body {
   position: relative;
   grid-area: portrait;
   width: 100%;
-  display: grid;
+  display: flex;
   align-items: center;
 }
 
 .intro-page .portrait img {
-  max-width: 16.5vw;
-  max-height: 33vh;
+  max-width: 50%;
   object-fit: cover;
   transform-origin: right center;
   transform: scale(2) translate(50%);
@@ -149,7 +147,7 @@ body {
 .intro-page section .myName {
   position: absolute;
   color: var(--large-bold-text);
-  font-size: 4.5em;
+  font-size: 3.5em;
 }
 
 .intro-page h2 {
@@ -171,6 +169,50 @@ body {
   align-items: center;
   justify-content: flex-end;
   gap: 2vw;
+}
+
+@media (min-width: 1800px) {
+  .intro-page section .myName {
+    font-size: 5.5em;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) {
+  .intro-page .svg {
+    display: none;
+  }
+
+  .intro-page .portrait img {
+    max-width: 70%;
+    transform-origin: 60% bottom;
+    transform: scale(1.7);
+  }
+
+  .intro-page section {
+    display: block;
+    max-width: 70vw;
+    box-shadow: 0px 0px 20px 10px rgb(255, 255, 255, 0.1);
+    padding-left: 50px;
+  }
+
+  .intro-page .portrait {
+    max-width: 50%;
+    float: left;
+  }
+
+  .intro-page h2 {
+    text-align: center;
+  }
+
+  .intro-page .details {
+    line-height: 130%;
+  }
+
+  .intro-page section .myName {
+    top: -70% !important;
+    right: -75%;
+    font-size: 4em;
+  }
 }
 
 /* second-page */
@@ -343,35 +385,4 @@ body {
   padding-top: 50px;
   display: flex;
   gap: 30px;
-}
-
-@media (min-width: 500px) and (max-width: 1024px) {
-  /* intro page */
-
-  .intro-page main {
-    display: block;
-  }
-
-  .intro-page section,
-  .intro-page aside {
-    display: inline-block;
-  }
-
-  .intro-page aside {
-    transform: scale(1);
-  }
-
-  .intro-page .portrait {
-    max-width: 30vw;
-    height: auto;
-  }
-
-  .intro-page aside > .details {
-    transform: scaleY(1);
-    display: inline;
-  }
-
-  .intro-page aside > .svg {
-    display: none;
-  }
 }
