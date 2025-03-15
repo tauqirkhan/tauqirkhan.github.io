@@ -475,9 +475,17 @@ body {
     gap: 20px;
     grid-template-columns: 1fr 1fr;
   }
+
+  #emailLengthOnMobile {
+    font-size: 0.8em;
+  }
 }
 
 @media (max-width: 500px) {
+  #emailLengthOnMobile {
+    font-size: 0.8em;
+  }
+
   .third-page main {
     display: block;
     max-width: 100vw;
