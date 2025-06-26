@@ -89,6 +89,10 @@ video {
   vertical-align: baseline;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --background-color: #000000;
   --foreground-color: #679ecb;
@@ -97,8 +101,26 @@ video {
   --normal-text: #969696;
 }
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 body {
   font-size: 18px;
+}
+
+a,
+a * {
+  transition: transform 0.5s;
+}
+
+a :hover,
+a *:hover {
+  transform: scale(1.1);
 }
 
 /* intro-page */
@@ -288,6 +310,12 @@ body {
     / 1fr;
 }
 
+@media (min-width: 1000px) {
+  .second-page main {
+    padding: 50px;
+  }
+}
+
 .second-page header {
   grid-area: header;
   display: flex;
@@ -322,6 +350,12 @@ body {
   grid-area: image;
 }
 
+.second-page .project > .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .project > .information {
   grid-area: information;
   display: grid;
@@ -329,6 +363,7 @@ body {
     [row1-start] "heading" 1fr[row1-end]
     [row2-start] "description" 2fr[row2-end];
   padding: 10px 20px;
+  gap: 10px;
 }
 
 .project .information > .heading {
@@ -341,7 +376,7 @@ body {
 .project .information > .description {
   grid-area: description;
   color: var(--normal-text);
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 .project .heading > .name {
